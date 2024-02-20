@@ -36,3 +36,9 @@ let str3 = str1 + str2;
 
 console.log(+true);
 console.log(+"");
+
+// Primitive
+// 7 types: String, Number, Boolean, Null, Undefined, symbol, BigInt
+
+// Reference (Non Primitive)
+// Array, Objects, functions
