@@ -24,8 +24,8 @@ const theNum = 1000000;
 
 // console.log(Math.random()); // will give you value always between 0 to 1 but randomly
 
-// console.log(Math.random() * 10 + 1);
-// sometimes value can be there like 0.04 and even if we have added *10 it will still be 00.4 and will give us value0, so to avoid 0 as min value we have added 1
+// console.log(Math.random() * 10 + 1); // to get a value between 1 to 10
+// sometimes value can be there like 0.04 and even if we have added *10 it will still be 00.4 and will give us value as 0, so to avoid 0 as min value we have added 1
 
 const min = 10;
 const max = 20;
