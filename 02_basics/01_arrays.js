@@ -23,17 +23,17 @@ const newArray = new Array(1, 2, 3, 4);
 
 // Slice and splice
 
-console.log("A ", myArray);
+console.log("A ", myArray); // A  [ 0, 1, 2, 3, 4, 5
 
 const newArr = myArray.slice(1, 3);
-console.log(newArr);
+console.log(newArr); //[ 1, 2 ]
 
-console.log("B ", myArray);
+console.log("B ", myArray); // B  [ 0, 1, 2, 3, 4, 5 ]
 
 const newArr1 = myArray.splice(1, 3);
-console.log(newArr1);
+console.log(newArr1); // [ 1, 2, 3 ]
 
-console.log("C ", myArray);
+console.log("C ", myArray); //C  [ 0, 4, 5 ]
 
 // Difference between slice and splice
 /*
