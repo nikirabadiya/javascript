@@ -2,9 +2,12 @@
 
 let score = "33a";
 
-// console.log(typeof score);
+// console.log(typeof null); // object
+// console.log(typeof score); // string
 
-let valueInNumber = Number(score);
+/* CONVERSION OF DATATYPES */
+
+let valueInNumber = Number(score); // will convert the score into number
 
 // console.log(valueInNumber, typeof valueInNumber);
 
