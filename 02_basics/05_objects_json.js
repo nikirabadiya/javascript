@@ -7,6 +7,8 @@ const course = {
 // console.log(course.courseInstructor); // Hitesh // normal way to access the objects
 
 // Destructure the object
+// const {} = course // to destructure the object
+
 // const { courseInstructor } = course; // easy way to access any value from that object to avoid course. syntax everytime we want to access the value
 // console.log(courseInstructor); // Hitesh
 
