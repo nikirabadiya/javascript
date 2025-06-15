@@ -6,64 +6,72 @@ function sayMyName() {
 }
 // sayMyName();
 
-// function addTwoNumbers(number1, number2) {
-// 	console.log(number1 + number2);
+// function addTwoNumbers(num1, num2) {
+// 	console.log(num1 + num2);
 // }
 
-function addTwoNumbers(number1, number2) {
-	// let result = number1 + number2;
-	// return result;
+// addTwoNumbers(3, 4); // 7
+// addTwoNumbers(3, "4"); // 34
 
-	return number1 + number2;
+// const result = addTwoNumbers(3, 5);
+// console.log(result); // undefined if we have not added return keyword as without return it will not return any result
+
+function addTwoNumbers(num1, num2) {
+	let result = num1 + num2;
+	return result;
+	console.log("test"); // it will not execute as we have written it after the return
 }
 
-const result = addTwoNumbers(3, 5);
-// console.log(result);
+const finalResult = addTwoNumbers(3, 5);
+// console.log(finalResult);
 
-function loginUserMessage(username = "sam") {
-	if (!username) {
-		console.log("Please enter Username.");
+function loginUseMsg(username) {
+	if (username === undefined) {
+		console.log("Please enter a username");
 		return;
+	} else {
+		return `${username} just logged in`;
 	}
-	return `${username} just logged in.`;
 }
+loginUseMsg("Nik"); // will not give any result as it has only returned the value but we haven't said anywhere to print that value too
 
-// console.log(loginUserMessage("test"));
-// console.log(loginUserMessage());
+// console.log(loginUseMsg("Nik")); // Nik just logged in
+// console.log(loginUseMsg()); // Please enter a username
 
 // function calculateCartPrice(...num1) {
-// 	// rest operator which will include all values in one place
+// 	// rest or spread operator
 // 	return num1;
 // }
+// console.log(calculateCartPrice(200, 300, 900)); // [ 200, 300, 900 ]
 
 function calculateCartPrice(val1, val2, ...num1) {
+	// rest or spread operator
 	return num1;
 }
-
-// console.log(calculateCartPrice(200, 400, 500));
+// console.log(calculateCartPrice(200, 300, 900, 3000)); // [ 900, 3000 ] // 200 and 300 values will be assigned to val1 and val2 respectively so we will get these numbers as num1 rest operator
 
 const user = {
-	username: "test",
-	price: 100,
+	userName: "test",
+	price: 999,
 };
 
-function handleObject(anyObject) {
+function handleObject(anyobject) {
 	console.log(
-		`Username is ${anyObject.username} and price is ${anyObject.price}`
+		`Username is ${anyobject.userName} and price is ${anyobject.price}`
 	);
 }
+// handleObject(user); // Username is test and price is 999
 
-// handleObject(user);
-// handleObject({
-// 	username: "sam",
-// 	price: 293,
-// });
+handleObject({
+	userName: "Sam",
+	price: "399",
+}); // Username is Sam and price is 399
 
-const newArray = [200, 400, 100, 450];
+const myNewArray = [200, 400, 500, 900];
 
-function handleArray(getArray) {
+function returnSecondValue(getArray) {
 	return getArray[1];
 }
+// console.log(returnSecondValue(myNewArray)); // 400
 
-// console.log(handleArray(newArray));
-// console.log(handleArray([200, 230, 402, 493]));
+console.log(returnSecondValue([200, 500, 900, 700])); // 500
