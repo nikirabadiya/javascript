@@ -60,7 +60,7 @@ const anotherId = Symbol("123");
 // Symbol works for unique element or component that's why instead of having same value, the comparison result is false
 
 // Primitive
-// 7 types: String, Number, Boolean, Null, Undefined, symbol, BigInt
+// 7 types: String, Number, Boolean, Null, Undefined, Symbol, BigInt
 
 // Reference (Non Primitive)
 // Array, Objects, functions

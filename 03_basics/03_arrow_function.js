@@ -16,8 +16,8 @@ const user = {
 this keyword represents the current context
 */
 // console.log(this); // {}
-/*
 
+/*
 for node environment, the context of this keyword will be empty,
 BUT for browser, it will be Window object
 */

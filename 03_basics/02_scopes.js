@@ -11,7 +11,7 @@ if (true) {
 // console.log(c); // 30
 
 /*
-this is the problem with scope, that it does not obey the scope and it does not limit it to its scope and it creats so many bugs in the code if variables are not scope specific
+this is the problem with var keyword, that it does not obey the scope and it does not limit it to its scope and it creats so many bugs in the code if variables are not scope specific
 */
 
 let a = 300;
@@ -57,6 +57,7 @@ function addOne(num) {
 }
 
 // Expression function
+
 console.log(addTwo(2)); // will throw an error as we have not declared the function as an ecpression which is also called hoisting
 
 const addTwo = function (num) {

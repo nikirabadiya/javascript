@@ -9,7 +9,7 @@
 // Object Literals
 
 const mySym = Symbol("key1"); // declaring the Symbol
-// now most interview question will be like declare the symbol and use it in the object as a key, to do that, refer how I have declare the 'mySym' var into the object as a key but not the way we usually declare in the object
+// now most interview question will be like declare the symbol in the object as a key, to do that, refer how I have declare the 'mySym' var into the object as a key but not the way we usually declare in the object
 
 const jsUser = {
 	name: "Test",
@@ -23,6 +23,9 @@ const jsUser = {
 };
 
 // console.log(jsUser.email); // test@google.com
+
+// to find the LENGTH of the object
+// console.log(Object.keys(jsUser).length); // 7
 
 // console.log(jsUser["email"]); // Another way to access object in special cases like we are having string for the key i.e here 'full name; is there so that is the special case
 // console.log(jsUser["full Name"]); // Test another
@@ -53,6 +56,6 @@ jsUser.greeting2 = function () {
 	console.log(`Hello JS User! ${this.name}`);
 };
 
-console.log(jsUser.greeting); // [Function (anonymous)] // it has not executed the function, it has just gave us the reference of that function
-console.log(jsUser.greeting()); // Hello JS User!
+// console.log(jsUser.greeting); // [Function (anonymous)] // it has not executed the function, it has just gave us the reference of that function
+// console.log(jsUser.greeting()); // Hello JS User!
 console.log(jsUser.greeting2()); // Hello JS User!

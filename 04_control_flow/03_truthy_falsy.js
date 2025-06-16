@@ -16,13 +16,17 @@
 // 	console.log("Object is empty");
 // }
 
-// Nullish Coalescing Operator (??): null, undefined
+// Nullish Coalescing Operator (??): null, undefined - safety check
 
 // let val1;
 // // val1 = 5 ?? 10; // 5
 // // val1 = null ?? 10; // 10
 // // val1 = undefined ?? 21; // 21
 // val1 = null ?? 10 ?? 15; // 10
+
+/* 
+It will skip the null or undefined values and return the first original value, so it is a safety check operator as we don't need null or undefined value in most of the case
+*/
 
 // console.log(val1);
 

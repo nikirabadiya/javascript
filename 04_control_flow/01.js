@@ -5,13 +5,13 @@ const isUserLoggedIn = true;
 // <, >, <=, >=, ==, !=, ===, !==
 
 // if (2 == "2") {
-// 	// compares only values without comparing the datatype so it will be true
-// 	console.log("executed");
+// 	// compares only values without comparing the datatype
+// 	console.log("executed"); // true
 // }
 
 // if (2 === "2") {
 // 	// compares values along with the datatype so it will be false and will not enter the in the loop
-// 	console.log("executed");
+// 	console.log("executed"); // false
 // }
 
 // const temperature = 41;
@@ -30,11 +30,9 @@ const isUserLoggedIn = true;
 
 // Shorthand condition - Not recommended
 // const balance = 200;
-
 // if (balance > 100) console.log("test");
 
 // const balance = 1000;
-
 // if (balance < 500) {
 // 	console.log("Less than 500");
 // } else if (balance < 750) {
@@ -52,10 +50,10 @@ const loggedInFromEmail = true;
 
 if (userLoggedIn && debitCard) {
 	// and operator
-	console.log("Allowed to buy courses");
+	console.log("Allowed to buy courses"); // true
 }
 
 if (loggedInFromGoogle || loggedInFromEmail) {
 	// OR operator
-	console.log("User logged in");
+	console.log("User logged in"); // true
 }

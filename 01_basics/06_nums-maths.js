@@ -6,6 +6,7 @@ const balance = new Number(100);
 // console.log(balance); // [Number: 100]
 
 // console.log(balance.toString().length); // 3
+
 // console.log(balance.toFixed(2)); // 100.00  // makes the value to fixed to the desired number beyond dot
 
 const otherNum = 23.8942;
