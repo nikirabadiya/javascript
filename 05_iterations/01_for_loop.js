@@ -49,7 +49,7 @@ for (let index = 1; index <= 20; index++) {
 for (let index = 1; index <= 20; index++) {
 	if (index == 5) {
 		console.log("Detected 5");
-		continue; // Ignore the printing the value of 5 as it will ignore this case, so the basically, we want to ignore or skip the condition for one time without stopping the loop
+		continue; // Will ignore the printing the value of 5 as it will ignore this case, so the basically, we want to ignore or skip the condition for one time without stopping the loop
 	}
 	console.log(`value of i is ${index}`);
 }

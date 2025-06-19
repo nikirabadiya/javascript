@@ -4,7 +4,7 @@ var accountPassword = "12345";
 accountCity = "Surat";
 
 /*
-Please not to use var keyword because of the problem in block scope and function scope
+Please do not use var keyword because of the problem in block scope and function scope
 */
 
 console.log(accountId);

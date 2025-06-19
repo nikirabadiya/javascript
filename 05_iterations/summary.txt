@@ -1,0 +1,23 @@
+● for loop:
+  Used for mostly strings and arrays or incrementable things
+
+● forof loop:
+  Mostly used to run loops for the ARRAYS
+
+● forin loop:
+  Mostly used to run loops for the OBJECTS
+
+● Map:
+  Is iterable with forof loop BUT not with forin loop
+
+● foreach:
+  The most used loop as it can be used to run loops for any datatypes, BUT it does not return the values explicitily
+
+● filter:
+  It will of cource run a loop like a foreach loop, but will return values on the true or false conditions
+
+● map:
+  It will run a loop similarly as foreach method unlike this method will return the value 
+
+● reduce:
+  It will also run a loop like foreach but it will help us to do some maths like we do in the shopping card (Please refer the program in the js file)
