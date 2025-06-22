@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asyn functions</title>
+</head>
+
+<body>
+  <h1>Async funtions setTimeout</h1>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  const sayTest = () => {
+    // console.log('Test');
+  }
+  setTimeout(sayTest, 2000); // do not execute function here by giving (), just give a reference of the function
+
+  const changetext = () => {
+    document.querySelector('h1').innerHTML = 'Best JS notes'
+  }
+  const changeTitle = setTimeout(changetext, 5000);
+  // clearTimeout(changeTitle); // not usable
+
+  document.querySelector('#stop').addEventListener('click', function () {
+    clearTimeout(changeTitle); // it will stop the timeout function execution
+  });
+</script>
+
+</html>

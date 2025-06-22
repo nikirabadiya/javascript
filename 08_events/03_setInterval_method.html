@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asyn functions</title>
+</head>
+
+<body>
+  <h1>Async funtions setInterval</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  // const sayDate = () => {
+  //   console.log('Test', Date.now())
+  // };
+  // setInterval(sayDate, 1000);
+
+  const printString = (str) => {
+    console.log(str, Date.now())
+  }
+  let intervalID;
+
+  document.querySelector('#start').addEventListener('click', function () {
+    intervalID = setInterval(printString, 1000, 'Hi'); // The third parameter here will work for the function argument
+  });
+
+  document.querySelector('#stop').addEventListener('click', function () {
+    clearInterval(intervalID) // it will stop the interval function execution
+  });
+
+  // unlike setTimeout function, it will repeat the function or method repeatedly with the interval time loop
+</script>
+
+</html>

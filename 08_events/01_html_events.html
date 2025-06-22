@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Amazing image</h2>
+  <div>
+    <ul id="images">
+      <li><img width="200px" id="photoshop"
+          src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="photoshop"></li>
+      <li><img width="200px" id="japan"
+          src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="river"
+          src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="owl"
+          src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="prayer"
+          src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+  </div>
+</body>
+<script>
+  // document.getElementById('owl').onclick = function (e) {
+  //   alert('Owl clicked');
+  // }
+
+  // attachEvent()
+  // jQuery - on ->event listener
+
+  // Learn about below event object methods by self
+
+  // type, timestamp, defaultPrevented, 
+  // target, toElement, srcElement, currentTarget
+  // clientX, clientY, screenX, screenY
+  // altkey, ctrlkey, shiftkey, keycode
+
+  document.getElementById('owl').addEventListener('click', function (e) {
+    // console.log(e)
+  }, false);
+
+  document.getElementById('images').addEventListener('click', function (e) {
+    // console.log('Click inside the ul');
+  }, false);
+
+  document.getElementById('owl').addEventListener('click', function (e) {
+    // console.log('OWL clicked');
+  }, false);
+
+  /*
+  true and false values show which usecase we need:
+
+  true - shows event capturing which goes from top level to bottom level, simplified it to - goes from parent element first to then child element
+
+  false - shows event bubbling which goes from bottom level to top level,
+  simplified it to - goes from child element first to then parent element
+
+  Above example description:
+  When we click on owl image, it's also part of images div, so it will also console the ul part, but depends on which usecase we have defined.
+  - If it is false, which is default value, if we don't add any value the by default it is the false which is event bubbling, so here what will happen, when we click on owl - first owl image console will be printed then ul console will be
+  - If it is true, then it cosiders it as event capture, in this scenario, ul console will be printed first and then owl image console will be
+
+  Try to make it false and true value and check it by yourself, will understand more clearly
+  */
+
+  // document.getElementById('owl').addEventListener('click', function (e) {
+  //   // console.log('OWL clicked');
+  //   e.stopPropagation(); // will stop propogation, which means this event will not bubble to its parent element 
+  //   // now only this console will be printed, not the ul one when we click on the owl image
+  // }, false);
+
+  document.getElementById('google').addEventListener('click', function (e) {
+    e.preventDefault(); // will prevent the default action of the click event of the element
+    // console.log('click inside the Google')
+  }, false);
+
+  document.querySelector('#images').addEventListener('click', function (e) {
+    // console.log(e.target.tagName);
+    if (e.target.tagName === 'IMG') {
+      let removeImage = e.target.parentNode;
+      // removeImage.parentNode.removeChild(removeImage); // old style to remove
+      removeImage.remove();
+    }
+  });
+
+</script>
+
+</html>
