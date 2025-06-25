@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closure and Lexical Scoping</title>
+</head>
+
+<body style="background-color: #313131;">
+  <button id="orange">Orange</button>
+  <button id="green">Green</button>
+</body>
+<script>
+  // function init() {
+  //   let name = "Mozilla";
+  //   function displayName() {
+  //     console.log(name);
+  //   }
+  //   displayName();
+  // }
+  // init();
+
+  // function outer() {
+  //   let userName = 'Nikita';
+
+  //   function inner() {
+  //     let secret = 'my123';
+  //     console.log('inner', userName);
+  //   }
+  //   inner();
+  //   console.log(secret)
+  // }
+  // outer();
+  // console.log('Too outer', userName);
+
+  // function makeFunc() {
+  //   const name = "Mozilla";
+  //   function displayName() {
+  //     console.log(name);
+  //   }
+  //   return displayName;
+  // }
+
+  // const myFunc = makeFunc();
+  // myFunc();
+</script>
+<script>
+  // document.getElementById('orange').onclick = function () {
+  //   document.body.style.backgroundColor = 'orange';
+  // }
+
+  // document.getElementById('green').onclick = function () {
+  //   document.body.style.backgroundColor = 'green';
+  // }
+
+  function clickHandler(color) {
+    // document.body.style.backgroundColor = `${color}`;
+
+    return function () {
+      document.body.style.backgroundColor = `${color}`;
+    }
+  }
+
+  document.getElementById('orange').onclick = clickHandler('orange');
+  document.getElementById('green').onclick = clickHandler('green');
+</script>
+<!-- ************************** EXPLAINATION ************************** -->
+<!-- 
+LEXICAL SCOPING:
+- When we declare a function, it creates its own scope. Now whatever variables are declared inside that function are not accessible outside of it.
+- Similarly, if we declare a function inside another function, it creates a nested scope. And the inner or child function can access the variables of the outer or parent function, but not vice versa. Even sibling functions cannot access each other's variables.
+- This is called lexical scoping, where the scope of a variable is determined by its location in the source code.
+
+CLOSURE:
+- A closure is a function that has access to its own scope, the outer function's scope, and the global scope.
+- When we give the reference of the function, it remembers the LEXICAL scope in which it was created, even after the outer function has finished executing.
+- In simple words, a closure is a function that retains access to its lexical scope, even when the function is executed outside that scope.
+- Suppose there is a house with a garden, and the house is the outer function. The garden is the inner function, which has access to the house's resources (variables). Even if the house is closed, the garden can still access its resources.
+- Another example, suppose there is house, and there are some people living it along with children. Now house it outer function, people and childern are inner functions. If house getss destroyed, children still remembers the memories of the house and people, in the same way, closure remembers the lexical scope in which it was created.
+-->
+
+</html>
