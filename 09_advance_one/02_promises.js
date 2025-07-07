@@ -96,7 +96,7 @@ fetch("https://api.github.com/users/hiteshchoudhary")
 	.then((data) => {
 		console.log(data);
 	})
-	.catch((erroe) => console.log(error));
+	.catch((error) => console.log(error));
 
 /*--------------- IMPORTANT INTERVIEW QUESTION --------------- */
 /*

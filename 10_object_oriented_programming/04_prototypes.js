@@ -48,7 +48,7 @@ const TASupport = {
 	__proto__: teachingSupport, // now this object can inherit properties from teachingSupport
 };
 
-teacher.__proto__ = user;
+teacher.__proto__ = user; // teacher can inherit the properties from user
 
 // Modern Syntax
 Object.setPrototypeOf(teachingSupport, teacher); // teachingSupport can now access or inherit properties from teacher
