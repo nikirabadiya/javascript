@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 0 0 4px;
+}
+
+input {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.checkbox-group {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6px;
+  row-gap: 16px;
+}
+
+.checkbox-btn, .checkbox-btn * {
+  cursor: pointer;
+}
+
+.button {
+  margin-top: 16px;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #3d44d0;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .checkbox-btn {
+    display: inline-flex;
+    width: 50%;
+    flex: 0 0 auto;
+    padding: 0 6px;
+  }
+}
