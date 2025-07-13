@@ -48,6 +48,11 @@ input {
   cursor: pointer;
 }
 
+#reset {
+  background-color: #ccc;
+  color: #000;
+}
+
 @media (min-width: 768px) {
   .checkbox-btn {
     display: inline-flex;
