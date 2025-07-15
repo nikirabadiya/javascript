@@ -18,7 +18,7 @@ function generatePassword(
 	allowedChars += includeNumbers ? numberChars : "";
 	allowedChars += includeSymbols ? symbolChars : "";
 
-	if (length <= 0 || isNaN(length)) {
+	if (!Number.isInteger(length) || length <= 0) {
 		return "Please enter valid length";
 	}
 
@@ -39,7 +39,7 @@ const resetBtn = document.querySelector("#reset");
 const output = document.querySelector("#output");
 
 submitBtn.addEventListener("click", () => {
-	const pwdLength = parseInt(document.querySelector("#length").value);
+	const pwdLength = Number(document.querySelector("#length").value);
 	const includeLowerCase = document.querySelector("#lowercase").checked;
 	const includeUpperCase = document.querySelector("#uppercase").checked;
 	const includeNumbers = document.querySelector("#numbers").checked;
