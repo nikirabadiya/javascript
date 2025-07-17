@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="row">
+      <div class="form-group">
+        <label for="amount">Bill Amount:</label>
+        <input type="text" class="input-fields amount" placeholder="Please enter the Bill amount">
+      </div>
+      <div class="form-group">
+        <label for="tip">Tip amount(percentage):</label>
+        <input type="text" class="input-fields tip" placeholder="Please enter the Tip amount">
+      </div>
+      <div class="form-group">
+        <label for="people">Number of People</label>
+        <input type="text" class="input-fields people" placeholder="Please enter the number of people">
+      </div>
+    </div>
+    <p class="error"></p>
+    <div class="center">
+      <button class="calculate-btn">Calculate</button>
+      <button class="clear-btn">Clear</button>
+    </div>
+    <table class="result-table" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>Total Tip:</td>
+          <td class="total-tip">$0.00</td>
+        </tr>
+        <tr>
+          <td>Total Bill:</td>
+          <td class="total-bill">$0.00</td>
+        </tr>
+        <tr>
+          <td>Tip per Person:</td>
+          <td class="person-tip">$0.00</td>
+        </tr>
+        <tr>
+          <td>Bill per Person:</td>
+          <td class="person-bill">$0.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="general.js"></script>
+</body>
+
+</html>
