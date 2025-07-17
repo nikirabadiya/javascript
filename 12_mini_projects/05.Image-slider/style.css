@@ -43,6 +43,12 @@
   right: 0;
 }
 
+.caption {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 @keyframes fade {
   from {
     opacity: 0.5;
